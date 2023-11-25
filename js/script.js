@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
     listenerBtn.push(document.getElementById("divisao"));
     listenerBtn.push(document.getElementById("multiplicacao"));
 
+    var btnConvertirCaF = document.getElementById("fac");
+
     //teclas númericas da calculadora
     listenerBtn.push(document.getElementById("num0"));
     listenerBtn.push(document.getElementById("num1"));
@@ -37,6 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btnResultado.onclick = function () {
         verificarResulatado();
+    }
+
+    btnConvertirCaF.onclick = function () {
+        convertirCentigradosAf();
+    }
+
+    function convertirCentigradosAf() {
+        var centigrados = tela.value;
+        var resultado = (centigrados*(9/5))+32;
+        tela.value = resultado;
     }
 
     function verificarResulatado() {
