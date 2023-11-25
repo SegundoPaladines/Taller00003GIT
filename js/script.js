@@ -41,14 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
         verificarResulatado();
     }
 
-    btnConvertirCaF.onclick = function () {
-        convertirCentigradosAf();
-    }
-
-    function convertirCentigradosAf() {
-        var centigrados = tela.value;
-        var resultado = (centigrados*(9/5))+32;
-        tela.value = resultado;
+    // de centigrados a F
+    btnConvertirCaF.onclick = () => {
+        tela.value = (tela.value*(9/5))+32;
     }
 
     function verificarResulatado() {
